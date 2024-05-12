@@ -25,16 +25,16 @@
         <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between  mb-4 border-bottom">
               <div class="col-3 ">
-                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <img src="../Static/Property.png" class="d-inline-flex" width="120px" height="120px" alt="">
+                <a href="{{ url_for('home') }}" class="d-inline-flex link-body-emphasis text-decoration-none">
+                  <img src="{{ url_for('static', filename='Property.png') }}" class="d-inline-flex" width="120px" height="120px" alt="">
                 </a>
               </div>
         
               <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="./home.html" class="nav-link px-4 link-secondary">Home</a></li>
-                <li><a href="./prediction.html" class="nav-link px-4 link-secondary">Prediciton</a></li>
-                <li><a href="./map.html" class="nav-link px-4 link-secondary">Map</a></li>
-                <li><a href="./contact.html" class="nav-link px-4 link-secondary">Contact</a></li>
+                <li><a href="{{ url_for('home') }}" class="nav-link px-4 link-secondary">Home</a></li>
+                <li><a href="{{ url_for('prediction') }}" class="nav-link px-4 link-secondary">Prediction</a></li>
+                <li><a href="{{ url_for('map') }}" class="nav-link px-4 link-secondary">Map</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link px-4 link-secondary">Contact</a></li>
               </ul>
         
               <div class="col-md-3 text-end">
@@ -47,85 +47,165 @@
             <div class="row gx-5">
                 <div class="col-6 left-container ">
                     <!-- Content for the left side -->
-                    <h3>Property Type</h3> <br>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          All Types
-                        </label>
+                    <!-- <h3>Property Type</h3> <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="House" value="House">
+                                <label class="form-check-label" for="House">
+                                  House
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Apartment / Unit / Flat" value="Apartment / Unit / Flat">
+                                <label class="form-check-label" for="Apartment / Unit / Flat">
+                                  Apartment / Unit / Flat
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Townhouse" value="Townhouse">
+                                <label class="form-check-label" for="Townhouse">
+                                  Townhouse
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Semi-Detached" value="Semi-Detached">
+                                <label class="form-check-label" for="Semi-Detached">
+                                  Semi-Detached
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Vacant land" value="Vacant land">
+                                <label class="form-check-label" for="Vacant land">
+                                  Vacant Land
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="" name="flexRadioDefault" id="Duplex" value="Duplex">
+                                <label class="form-check-label" for="Duplex">
+                                  Duplex
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="" name="flexRadioDefault" id="Terrance" value="Terrance">
+                                <label class="form-check-label" for="Terrance">
+                                  Terrance
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="" name="flexRadioDefault" id="Block of Units" value="Block of Units">
+                                <label class="form-check-label" for="Block of Units">
+                                  Block of Units
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Acreage / Semi-Rural" value="Acreage / Semi-Rural">
+                                <label class="form-check-label" for="Acreage / Semi-Rural">
+                                  Acreage / Semi-Rural
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="New House & Land" value="New House & Land">
+                                <label class="form-check-label" for="New House & Land">
+                                  New House & Land
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="New Apartments / Off the Plan" value="New Apartments / Off the Plan">
+                                <label class="form-check-label" for="New Apartments / Off the Plan">
+                                  New Apartments / Off the Plan
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Development Site" value="Development Site">
+                                <label class="form-check-label" for="Development Site">
+                                  Development Site
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Studio" value="Studio">
+                                <label class="form-check-label" for="Studio">
+                                  Studio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="Rural" value="Rural">
+                                <label class="form-check-label" for="Rural">
+                                  Rural
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="New Land" value="New Land">
+                                <label class="form-check-label" for="New Land">
+                                  New Land
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked">
-                          House
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                          Townhouse
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Apartment & Unit
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Villa
-                        </label>
-                    </div>
+                   
+                   
+                    
                     <hr>
-                    <h3>Area</h3> <br>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select> <br>
+                    <h3>Suburb</h3> <br>
+                    <input type="suburb" class="form-control" id="suburb" aria-describedby="emailHelp" placeholder="Enter suburb location">
+                    <br> -->
                     <hr>
                     <h3>Bedrooms</h3> <br>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="num_bed"aria-label="Default select example">
                         <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select> <br>
                     <hr>
                     <h3>Bathrooms</h3> <br>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="num_bath" aria-label="Default select example">
                         <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select> <br>
                     <hr>
                     <h3>Car Spaces</h3> <br>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="num_parking" aria-label="Default select example">
                         <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select> <br>
+                    <h3>Suburb Median Income</h3> <br>
+                    <input type="email" class="form-control" id="suburb_median_income" aria-describedby="emailHelp" placeholder="Enter suburb median income">
+                    <br>
+                    <h3>Distance From CBD</h3> <br>
+                    <input type="email" class="form-control" id="km_from_cbd" aria-describedby="emailHelp" placeholder="Enter distance from cbd">
+                    <br>
+                    <h3>Year Sold</h3> <br>
+                    <input type="email" class="form-control" id="year_sold" aria-describedby="emailHelp" placeholder="Enter year sold">
+                    <br>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">Button</button> <br>
+                        <button class="btn btn-primary" type="button" onclick="makePrediction()">Predict</button> <br>
                     </div>
                 </div>
                 <div class="col-6 ">
                     <!-- Content for the right side -->
                     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg right-container">
-                        <div class="container h-100">
+                        <div class="container">
                             <div class="row mt-5">
                               <h6 class="text-center" style="color:white;">House will cost you around</h6>
                             </div>
                             <div class="row d-flex justify-content-center align-items-center">
-                                <h1 class="fs-1 result fw-bold text-center" style="color:white;">$ <span class="result" id="uiEstimatedPrice">188</span> Millions</h1>
+                                <h1 class="fs-1 result fw-bold text-center" style="color:white;"> <span class="result" id="uiEstimatedPrice">Waiting for prediction...</span> </h1>
                             </div>
                             <div class="row d-flex justify-content-center text-center h-75 mt-5 w-100">
-                                <img src="../Static/house.svg" alt="house" class="w-100 zoom">
+                                <img src="{{ url_for('static', filename='house.svg') }}" class="w-100 zoom" alt="house">
                                 <h1 style="color:white; font-weight: bold;"  >House Price Estimator</h1>
                             </div>
                         </div>
@@ -133,6 +213,53 @@
                 </div>
             </div>
         </div>
+        <script>
+            function makePrediction() {
+                console.log('Button clicked!');  // Check if function is triggered
+                // Construct the input data
+                let inputData = {
+                    // 'type': document.querySelector('input[name="flexRadioDefault"]:checked').value,
+                    // 'suburb': document.getElementById('suburb').value,
+                    'suburb_median_income': document.getElementById('suburb_median_income').value,
+                    'year_sold': document.getElementById('year_sold').value,
+                    'num_parking': document.getElementById('num_parking').value,
+                    'km_from_cbd': document.getElementById('km_from_cbd').value,
+                    'num_bath': document.getElementById('num_bath').value,
+                    'num_bed': document.getElementById('num_bed').value
+                };
+                
+                console.log('Sending data:', inputData); // Log input data for debugging
+
+                fetch('/prediction', { // Changed to correct endpoint
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(inputData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                  console.log('Received data:', data); // Log received data for debugging
+                  // Divide the prediction by 10 to scale it down
+                  var scaledPrice = data.prediction[0] / 10;
+                  // Format the number with two decimal places and commas as thousands separators
+                  var formattedPrice = scaledPrice.toLocaleString('en-US', {
+                    style: 'decimal',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                  });
+                  document.getElementById('uiEstimatedPrice').textContent = '$ ' + formattedPrice;
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                  document.getElementById('uiEstimatedPrice').textContent = 'Error fetching prediction';
+                });
+            }
+
+            document.querySelector('.btn-primary').addEventListener('click', makePrediction);
+        </script>
+            
+            
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       </body>
     </html>

@@ -43,16 +43,16 @@
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between mb-4 border-bottom">
             <div class="col-3 ">
-                <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <img src="../Static/Property.png" class="d-inline-flex" width="120px" height="120px" alt="">
+                <a href="{{ url_for('home') }}" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="{{ url_for('static', filename='Property.png') }}" class="d-inline-flex" width="120px" height="120px" alt="">
                 </a>
             </div>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="./home.html" class="nav-link px-4 link-secondary">Home</a></li>
-                <li><a href="./prediction.html" class="nav-link px-4 link-secondary">Prediction</a></li>
-                <li><a href="./map.html" class="nav-link px-4 link-secondary">Map</a></li>
-                <li><a href="./contact.html" class="nav-link px-4 link-secondary">Contact</a></li>
+                <li><a href="{{ url_for('home') }}" class="nav-link px-4 link-secondary">Home</a></li>
+                <li><a href="{{ url_for('prediction') }}" class="nav-link px-4 link-secondary">Prediction</a></li>
+                <li><a href="{{ url_for('map') }}" class="nav-link px-4 link-secondary">Map</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link px-4 link-secondary">Contact</a></li>
             </ul>
 
             <div class="col-md-3 text-end">
