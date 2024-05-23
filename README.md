@@ -12,7 +12,6 @@ The Predictive Analytics for Real Estate Price System is designed to predict hou
     - [Features](#features)
 2. [Machine Learning Model](#machine-learning-model)
     - [Installation](#installation-1)
-    - [Usage](#usage-1)
     - [Data Requirements](#data-requirements)
     - [Model Training](#model-training)
     - [Prediction](#prediction)
